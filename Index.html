@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🦇 Batcaverna do Fidelis 🍖</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:#050505;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+header{
+
+position:relative;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+overflow:hidden;
+
+}
+
+header img{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+filter:brightness(.35);
+
+}
+
+.overlay{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(to bottom,
+rgba(0,0,0,.2),
+rgba(0,0,0,.85));
+
+}
+
+.conteudo{
+
+position:relative;
+
+z-index:10;
+
+padding:20px;
+
+}
+
+h1{
+
+font-size:50px;
+
+color:#FFD700;
+
+text-shadow:0 0 15px #000;
+
+margin-bottom:20px;
+
+}
+
+.sub{
+
+font-size:22px;
+
+margin-bottom:30px;
+
+}
+
+.botao{
+
+display:inline-block;
+
+padding:18px 35px;
+
+background:#25D366;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:10px;
+
+font-size:20px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.botao:hover{
+
+transform:scale(1.08);
+
+}
+
+section{
+
+padding:60px 25px;
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+.card{
+
+background:#171717;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 0 20px rgba(255,215,0,.2);
+
+}
+
+.card h2{
+
+color:#FFD700;
+
+margin-bottom:20px;
+
+}
+
+.card p{
+
+font-size:20px;
+
+line-height:1.8;
+
+}
+
+.info{
+
+margin-top:35px;
+
+font-size:22px;
+
+line-height:2;
+
+}
+/* ===== CONTAGEM REGRESSIVA ===== */
+
+#contador{
+margin-top:40px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+color:#FFD700;
+}
+
+/* ===== BOTÃO MAPA ===== */
+
+.mapa{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:18px 35px;
+
+background:#E53935;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:10px;
+
+font-size:20px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.mapa:hover{
+
+transform:scale(1.08);
+
+}
+
+/* ===== RODAPÉ ===== */
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+background:#111;
+
+margin-top:50px;
+
+color:#bbb;
+
+font-size:18px;
+
+}
+
+/* ===== ANIMAÇÕES ===== */
+
+@keyframes aparecer{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.card{
+
+animation:aparecer 1.5s;
+
+}
+
+.botao{
+
+box-shadow:0 0 20px #25D366;
+
+}
+
+.mapa{
+
+box-shadow:0 0 20px red;
+
+}
+</style>
+
+</head>
+<script>
+
+// =======================
+// CONTAGEM REGRESSIVA
+// =======================
+
+const dataEvento = new Date("July 25, 2026 20:00:00").getTime();
+
+const contador = document.getElementById("contador");
+
+setInterval(function(){
+
+const agora = new Date().getTime();
+
+const distancia = dataEvento - agora;
+
+const dias = Math.floor(distancia / (1000*60*60*24));
+
+const horas = Math.floor((distancia%(1000*60*60*24))/(1000*60*60));
+
+const minutos = Math.floor((distancia%(1000*60*60))/(1000*60));
+
+const segundos = Math.floor((distancia%(1000*60))/1000);
+
+contador.innerHTML =
+"⏳ Faltam <br><br><span style='font-size:38px;color:#FFD700'>" +
+dias+" dias " +
+horas+"h " +
+minutos+"m " +
+segundos+"s</span>";
+
+if(distancia < 0){
+
+contador.innerHTML =
+"🎉🍖 O CHURRASCO JÁ COMEÇOU! 🍻";
+
+}
+
+},1000);
+
+</script>
+<body>
+
+<header>
+
+<img src="Gemini_Generated_Image_g0x578g0x578g0x5.png">
+
+<div class="overlay"></div>
+
+<div class="conteudo">
+
+<h1>🦇 CHURRASCO DO FIDELIS 🍖</h1>
+
+<p class="sub">
+
+Uma noite de churrasco, resenha e diversão na Batcaverna!
+
+</p>
+
+<a class="botao"
+href="https://wa.me/5511962997863?text=🦇 Olá! Confirmo minha presença no Churrasco do Fidelis no dia 25/07/2026 às 20:00. Já estou preparando minha bebida favorita e 1 kg de carne para a Batcaverna! 🍖🍺😎
+
+✅ Confirmar Presença
+
+</a>
+
+</div>
+
+</header>
+
+<section>
+
+<div class="card">
+
+<h2>🦇 A missão começou...</h2>
+
+<p>
+
+Gotham entrou em alerta... mas desta vez não é por causa do Coringa.
+
+O Morcegão resolveu abrir as portas da Batcaverna para reunir a galera em um churrasco inesquecível.
+
+A churrasqueira já está pegando fogo, a resenha promete e agora só falta você!
+
+Prepare sua bebida favorita, escolha 1 kg de carne da sua preferência e venha fazer parte dessa missão.
+
+Porque nessa noite...
+
+<strong>vamos ficar mais louco que o Batman!</strong> 🦇🍖🍻😎
+
+</p>
+
+<div class="info">
+
+📅 <b>25/07/2026</b><br>
+
+🕗 <b>20:00</b><br>
+
+📍 <b>Rua Álamo, 93</b><br><br>
+
+🍺 Traga sua bebida favorita,
+🍖 <b>1 kg de carne da sua preferência</b>
+e venha se divertir na Batcaverna!
+
+<div id="contador">
+
+⏳ Carregando contagem...
+
+</div>
+
+<br>
+
+<a class="mapa"
+href="https://maps.google.com/?q=Rua Álamo 93"
+target="_blank">
+
+📍 Como chegar
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+🦇🍖 Batcaverna do Fidelis 🍻
+
+<br><br>
+
+"Vamos ficar mais louco que o Batman."
+
+</footer>
